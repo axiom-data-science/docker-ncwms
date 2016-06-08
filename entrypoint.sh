@@ -6,11 +6,11 @@ if [ "$1" = 'catalina.sh' ]; then
     sync
 
     if [ ! -z "$DEFAULT_PALETTE" ]; then
-        sed -i "/<\/Context>/i <Parameter name=\"defaultPalette\" value=\"$DEFAULT_PALETTE\" override=\"false\"/>" $CATALINA_HOME/conf/Catalina/localhost/ncWMS.xml
+        sed -i "/<\/Context>/i <Parameter name=\"defaultPalette\" value=\"$DEFAULT_PALETTE\" override=\"true\"/>" $CATALINA_HOME/conf/Catalina/localhost/ncWMS.xml
     fi
 
     if [ ! -z "$ADVERTISED_PALETTES" ]; then
-        sed -i "/<\/Context>/i <Parameter name=\"advertisedPalettes\" value=\"$ADVERTISED_PALETTES\" override=\"false\"/>" $CATALINA_HOME/conf/Catalina/localhost/ncWMS.xml
+        sed -i "/<\/Context>/i <Parameter name=\"advertisedPalettes\" value=\"$ADVERTISED_PALETTES\" override=\"true\"/>" $CATALINA_HOME/conf/Catalina/localhost/ncWMS.xml
     fi
 
     exec gosu tomcat "$@"

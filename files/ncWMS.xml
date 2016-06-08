@@ -1,6 +1,3 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Context>
-    <Parameter name="configDir" value="/config" override="false"/>
-    <Parameter name="paletteDirs" value="/config/palettes" override="false"/>
-    <Parameter name="styleDirs" value="/config/styles" override="false"/>
 </Context>

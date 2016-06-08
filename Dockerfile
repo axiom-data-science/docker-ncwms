@@ -20,15 +20,10 @@ COPY files/tomcat-users.xml $CATALINA_HOME/conf/tomcat-users.xml
 # Java options
 COPY files/javaopts.sh $CATALINA_HOME/bin/javaopts.sh
 
-
-# Set the config path to /config
-ENV NCWMS_CONFIG_DIR /config
-RUN mkdir -p $NCWMS_CONFIG_DIR
+# Create context config file
 COPY files/ncWMS.xml $CATALINA_HOME/conf/Catalina/localhost/ncWMS.xml
-VOLUME $NCWMS_CONFIG_DIR
 
 # Set permissions
-RUN chown -R tomcat:tomcat "$NCWMS_CONFIG_DIR"
 RUN chown -R tomcat:tomcat "$CATALINA_HOME"
 
 COPY entrypoint.sh /
