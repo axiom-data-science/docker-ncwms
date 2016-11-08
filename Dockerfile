@@ -5,9 +5,9 @@ RUN \
     apt-get update && \
     apt-get install -y unzip
 
-# THREDDS
-ENV EDAL_VERSION 1.2.4
-ENV WAR_URL https://github.com/Reading-eScience-Centre/edal-java/releases/download/edal-$EDAL_VERSION/ncWMS2.war
+# ncWMS
+ENV ncWMS_VERSION 2.2.4
+ENV WAR_URL https://github.com/Reading-eScience-Centre/ncwms/releases/download/ncwms-$ncWMS_VERSION/ncWMS2.war
 
 RUN curl -fSL "$WAR_URL" -o ncWMS.war
 RUN unzip ncWMS.war -d $CATALINA_HOME/webapps/ncWMS/
