@@ -4,7 +4,7 @@ A feature full Tomcat (SSL over APR, etc.) running [ncWMS](http://www.resc.rdg.a
 
 Available versions:
 
-* `axiom/docker-ncwms` (currently `2.1.2`)
+* `axiom/docker-ncwms` (currently `2.1.2`) - [docker hub](https://hub.docker.com/r/axiom/docker-ncwms/builds/)
 
 
 ### tl;dr
