@@ -26,10 +26,10 @@ $ docker run \
     -d \
     -p 80:8080 \
     -p 443:8443 \
-    -v /path/to/your/ssl.crt:/opt/tomcat/conf/ssl.crt \
-    -v /path/to/your/ssl.key:/opt/tomcat/conf/ssl.key \
-    -v /path/to/your/tomcat-users.xml:/opt/tomcat/conf/tomcat-users.xml \
-    -v /path/to/your/ncwms/config:/opt/tomcat/.ncWMS2 \
+    -v /path/to/your/ssl.crt:/usr/local/tomcat/conf/ssl.crt \
+    -v /path/to/your/ssl.key:/usr/local/tomcat/conf/ssl.key \
+    -v /path/to/your/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml \
+    -v /path/to/your/ncwms/config:/usr/local/tomcat/.ncWMS2 \
     -e "ADVERTISED_PALETTES=div-RdBu" \
     -e "DEFAULT_PALETTE=div-RdBu" \
     --name ncwms \
@@ -49,7 +49,7 @@ Mount your own `config` directory:
 
 ```bash
 $ docker run \
-    -v /path/to/your/ncwms/config/directory:/opt/tomcat/.ncWMS2 \
+    -v /path/to/your/ncwms/config/directory:/usr/local/tomcat/.ncWMS2 \
     ... \
     axiom/docker-ncwms
 ```
