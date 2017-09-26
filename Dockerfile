@@ -6,7 +6,7 @@ RUN \
     apt-get install -y unzip
 
 # ncWMS
-ENV ncWMS_VERSION 2.2.5
+ENV ncWMS_VERSION 2.2.10
 ENV WAR_URL https://github.com/Reading-eScience-Centre/ncwms/releases/download/ncwms-$ncWMS_VERSION/ncWMS2.war
 
 RUN curl -fSL "$WAR_URL" -o ncWMS.war
